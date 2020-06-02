@@ -1,4 +1,31 @@
-h1 {
-  font-family: fantasy;
-  color:rgb(86, 139, 86);
+body {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: rgb(225, 236, 225);
+}
+
+header, footer {
+  background-color: rgb(150, 187, 150);
+  color: rgb(62, 87, 62); 
+  border: 1px solid rgb(62, 87, 62);
+}
+
+/* set footer box */
+  footer {
+    margin: 0px auto;
+    width: 960px;
+    height: 40px;
+}
+/* center navigation links within footer */
+footer > nav > ul > li {
+    display: inline-block;
+    width: 200px;
+    text-align: center; 
+}
+
+footer > nav > ul > li > a {
+  color: rgb(62, 87, 62);    
+}
+
+footer > nav > ul > li#copy {
+  color: rgb(245, 245, 245);
 }
