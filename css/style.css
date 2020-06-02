@@ -6,20 +6,24 @@ body {
 header, footer {
   background-color: rgb(150, 187, 150);
   color: rgb(62, 87, 62); 
-  border: 1px solid rgb(62, 87, 62);
+}
+
+header {
+  text-align: center;
 }
 
 /* set footer box */
   footer {
     margin: 0px auto;
-    width: 960px;
+    /* width: 960px; */
     height: 40px;
 }
 /* center navigation links within footer */
 footer > nav > ul > li {
     display: inline-block;
-    width: 200px;
+    width: 300px;
     text-align: center; 
+    padding: 10px;
 }
 
 footer > nav > ul > li > a {
