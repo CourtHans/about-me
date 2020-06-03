@@ -76,3 +76,15 @@ Does Courtney know how to write wicked good code?
     alert('Double check your spelling next time, whatever that was, it wasn\'t right. Courtney is an identical twin.');
   }
 
+  var jokeYN= prompt('Does she like bad jokes?').toLowerCase();
+
+  if (jokeYN === 'yes' || jokeYN === 'y') {
+    console.log ('bad jokes: correct');
+    alert('Like them? More like LOVES them!');
+  } else if (jokeYN === 'no' || jokeYN === 'n') {
+    console.log('bad jokes: incorrect');
+    alert('For better or for worse, I\'m embarassed to say she LOVES them.');
+  } else {
+    console.log('bad jokes: invalid answer');
+    alert('Invalid input - you were supposed to write yes or no. For the record, she loves \'em.');
+  }
