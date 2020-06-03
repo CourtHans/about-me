@@ -10,6 +10,16 @@ header, footer {
 
 header {
   text-align: center;
+  border-top: solid; rgb(62, 87, 62);
+  border-bottom: solid; rgb(62, 87, 62);
+}
+
+article > img {
+  width: 215px;
+  height: 230px;
+  border-style: solid; color: rgb(62, 87, 62);
+  display: inline-block;
+  margin: 10px;
 }
 
 /* set footer box */
@@ -30,6 +40,3 @@ footer > nav > ul > li > a {
   color: rgb(62, 87, 62);    
 }
 
-footer > nav > ul > li#copy {
-  color: rgb(245, 245, 245);
-}
