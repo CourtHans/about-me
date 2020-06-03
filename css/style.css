@@ -22,16 +22,17 @@ article {
 }
 
 /* style pictures, add greyscale covering */
-article > img {
+section > img {
   width: 215px;
   height: 230px;
   display: inline-block;
-  margin: 10px;transition: transform .5s, filter 0.5s ease-in-out;
+  margin: 10px;
+  transition: transform .5s, filter 0.5s ease-in-out;
   filter: grayscale(100%);
   border-style: solid; color: rgb(62, 87, 62);
 }
 /* removes greyscale covering when cursor hovers over article*/
-article:hover img {
+img:hover {
   filter: grayscale(0);
   transform: scale(1.1);
 }
