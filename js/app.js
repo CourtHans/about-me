@@ -36,17 +36,17 @@ How old is Courtney? (just for fun)
   document.write('<h2>' + greeting + userName + '! </h2>');
   
   //============question 1============
-  var twinYN = prompt('Does Courtney have a twin? Please answer "Y" or "N"!').toLowerCase();
+  var twinYN = prompt('Does Courtney have a twin? (yes or no)').toLowerCase();
 
-  if (twinYN === 'y') {
+  if (twinYN === 'yes' || twinYN === 'y') {
     // console.log ('twin answer: correct');
     alert('You\'re right, she IS a twin!');
-  } else if (twinYN === 'n') {
+  } else if (twinYN === 'no' || twinYN === 'n') {
     // console.log('twin answer: incorrect');
     alert('Wrong, she IS a twin.');
   } else {
     // console.log('twin answer: invalid answer');
-    alert('This is a y or n question.');
+    alert('This is a y or n question. For your information, she IS a twin.');
   }
   
   //============question 2============
@@ -64,7 +64,7 @@ How old is Courtney? (just for fun)
   }
 
   //============question 3============
-  var jokeYN= prompt('Does she like bad jokes? (Y/N)').toLowerCase();
+  var jokeYN= prompt('Does she like bad jokes? (yes or no)').toLowerCase();
 
   if (jokeYN === 'yes' || jokeYN === 'y') {
     // console.log ('bad jokes: correct');
@@ -78,7 +78,7 @@ How old is Courtney? (just for fun)
   }
   
   //============question 4============
-  var kidsYN= prompt('Does Courtney have kids? Reminder - answer "Y" or "N"').toLowerCase();
+  var kidsYN= prompt('Does Courtney have kids (yes or no)?').toLowerCase();
 
   if (kidsYN === 'yes' || kidsYN === 'y') {
     // console.log ('kids: correct');
@@ -92,7 +92,7 @@ How old is Courtney? (just for fun)
   }
 
   //============question 5============
-  var codeYN= prompt('Last one: can Courtney code? (Y or N)').toLowerCase();
+  var codeYN= prompt('Last one: can Courtney code? (yes or no)').toLowerCase();
 
   if (codeYN === 'yes' || codeYN === 'y') {
     // console.log ('but can she code?: correct');
