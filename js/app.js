@@ -17,7 +17,7 @@ How old is Courtney? (just for fun)
 
   var userName = prompt('What\'s your preferred name?');
 
-  //for fun greeting at the bottom of the page
+  // ============for fun greeting at the bottom of the page============
   var today = new Date();
   var hourNow = today.getHours();
   var greeting;
@@ -31,12 +31,11 @@ How old is Courtney? (just for fun)
   } else {
     greeting = 'Bienvenuto, ';
   }
-  //welcome to the page
+  //============welcome to the page============
   alert('Welcome to my page, ' + userName + ', let\'s see how much you already know about Courtney...');
-  console.log('user\'s name is:', userName);
   document.write('<h2>' + greeting + userName + '! </h2>');
   
-  //question 1
+  //============question 1============
   var twinYN = prompt('Does Courtney have a twin? Please answer "Y" or "N"!').toLowerCase();
 
   if (twinYN === 'y') {
@@ -50,7 +49,7 @@ How old is Courtney? (just for fun)
     alert('This is a y or n question.');
   }
   
-  //question 2
+  //============question 2============
   var twinType= prompt('Now that you know, tell me..identical or fraternal twin?').toLowerCase();
 
   if (twinType === 'identical') {
@@ -64,7 +63,7 @@ How old is Courtney? (just for fun)
     alert('Double check your spelling next time, whatever that was, it wasn\'t right. Courtney is an identical twin.');
   }
 
-  //question 3
+  //============question 3============
   var jokeYN= prompt('Does she like bad jokes? (Y/N)').toLowerCase();
 
   if (jokeYN === 'yes' || jokeYN === 'y') {
@@ -78,7 +77,7 @@ How old is Courtney? (just for fun)
     alert('Invalid input - you were supposed to write yes or no. As for bad jokes? She LOVES \'em.');
   }
   
-  //question 4
+  //============question 4============
   var kidsYN= prompt('Does Courtney have kids? Reminder - answer "Y" or "N"').toLowerCase();
 
   if (kidsYN === 'yes' || kidsYN === 'y') {
@@ -92,7 +91,7 @@ How old is Courtney? (just for fun)
     alert('It was a simple yes or no. If you\'re curious, she has two.');
   }
 
-  //question 5
+  //============question 5============
   var codeYN= prompt('Last one: can Courtney code? (Y or N)').toLowerCase();
 
   if (codeYN === 'yes' || codeYN === 'y') {
@@ -106,7 +105,7 @@ How old is Courtney? (just for fun)
     alert('Was a "y" or "n" too difficult? C\'mon, ' + userName + ', you\'re better than that! For the record, Courtney can code LIKE A MOTHER!');
   }
   
-  //bonus question
+  //============bonus question============
   // var guessCourtneyAge = prompt('If you HAD to guess, how old (or young!) do you think Courtney is?')
   // var guessCourtneyAgeAsANumber = parseInt(guessCourtneyAge);
 
