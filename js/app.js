@@ -47,7 +47,6 @@ function askTwinQuestion(){
   // console.log('Q1 (twin?): invalid answer ' + qTwin + ' points');
   }
 }
-askTwinQuestion();
 //========================question 2 - twin type========================
 function askTwinTypeQuestion(){
   var twinType= prompt('Now that you know, tell me...identical or fraternal twin?').toLowerCase();
@@ -65,7 +64,6 @@ function askTwinTypeQuestion(){
   // console.log('Q2 (ident/frat?): invalid answer ' + qTwinType + ' points');
   }
 }
-askTwinTypeQuestion();
 //========================question 3 - joke ========================
 function askJokeQuestion(){
   var jokeYN= prompt('Does she like bad jokes? (yes or no)').toLowerCase();
@@ -83,7 +81,6 @@ function askJokeQuestion(){
   // console.log('QJoke (bad jokes?): invalid answer ' + qJoke + ' points');
   }
 }
-askJokeQuestion();
 //========================question 4 - summit========================
 function askSummitQuestion(){
   var summitYN= prompt('Has Courtney summitted Mt. Kilamanjaro? (yes or no)?').toLowerCase();
@@ -101,7 +98,6 @@ function askSummitQuestion(){
   // console.log('qSummit (summit?): invalid answer ' + qSummit + ' points');
   }
 }
-askSummitQuestion();
 //========================question 5 - code ========================
 function askCodeQuestion(){
   var codeYN= prompt('Next up: can Courtney code? (yes or no)').toLowerCase();
@@ -119,7 +115,6 @@ function askCodeQuestion(){
   // console.log('qCode (code?): invalid answer ' + qCode + ' points');
   }
 }
-askCodeQuestion();
 //========================question 6 - shower========================
 //special thanks to Matt Herriges and Richard Lee for help here
 function askShowerQuestion(){
@@ -154,7 +149,6 @@ function askShowerQuestion(){
   // console.log('qShower (shower?): incorrect ' + qShower + ' points: ' + triesShowerDays + ' attempt(s)');
   }
 }
-askShowerQuestion();
 //========================question 7 - country========================
 function askCountryQuestion(){
   var countryArray = ['australia', 'austria', 'belgium', 'canada', 'chile', 'czech republic', 'czechrepublic', 'france', 'germany', 'hungary', 'iceland', 'indonesia', 'ireland', 'italy', 'luxembourg', 'mexico', 'netherlands', 'new zealand', 'newzealand', 'norway', 'peru', 'spain', 'united kingdom', 'unitedkingdom', 'vietnam'];
@@ -180,7 +174,6 @@ function askCountryQuestion(){
   // console.log('QCountry (country?): incorrect ' + qCountry + ' points: ' + guessAttempts + ' attempt(s)');
   }
 }
-askCountryQuestion();
 //========================final tally========================
 function reportFinalTally(){
   finalScore = qTwin + qTwinType + qJoke + qSummit + qCode + qShower + qCountry;
@@ -194,7 +187,6 @@ function reportFinalTally(){
   // console.log('final score: ' + finalScore);
   }
 }
-reportFinalTally();
 // ========for fun greeting and score at the bottom of the page=========
 function writeFunGreeting(){
   var today = new Date();
@@ -213,8 +205,15 @@ function writeFunGreeting(){
 
   document.write('<h2>' + greeting + userName + '! Your final score was ' + finalScore + '/7.</h2>');
 }
-writeFunGreeting();
 
 // ========Function Invocations=========
 
-
+askTwinQuestion();
+askTwinTypeQuestion();
+askJokeQuestion();
+askSummitQuestion();
+askCodeQuestion();
+askShowerQuestion();
+askCountryQuestion();
+reportFinalTally();
+writeFunGreeting();
