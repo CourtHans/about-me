@@ -19,6 +19,7 @@ Keep track of correct answers, at the end, tell them how many (out of 7) they go
 var userName = prompt('What\'s your preferred name?');
 var finalScore; //for final tally
 var qTwin = 1;
+var qTwinType = 1;
 
 //====================welcome to the page===================
 alert('Welcome to my page, ' + userName + ', let\'s see how much you already know about Courtney...');
@@ -43,22 +44,23 @@ function askTwinQuestion(){
 }
 askTwinQuestion();
 //========================question 2 - twin type========================
-var twinType= prompt('Now that you know, tell me...identical or fraternal twin?').toLowerCase();
+function askTwinTypeQuestion(){
+  var twinType= prompt('Now that you know, tell me...identical or fraternal twin?').toLowerCase();
 
-if (twinType === 'identical') {
-  alert('Correct! Courtney\'s an identical twin (also known as monozygous).');
-  var qTwinType = 1;
+  if (twinType === 'identical') {
+    alert('Correct! Courtney\'s an identical twin (also known as monozygous).');
   // console.log ('Q2 (ident/frat?): correct ' + qTwinType + ' point');
-} else if (twinType === 'fraternal') {
-  alert('Incorrect. Courtney is an IDENTICAL twin. Fun fact: fraternal twins are known as "dizygous twins."');
-  qTwinType = 0;
+  } else if (twinType === 'fraternal') {
+    alert('Incorrect. Courtney is an IDENTICAL twin. Fun fact: fraternal twins are known as "dizygous twins."');
+    qTwinType = 0;
   // console.log('Q2 (ident/frat?): incorrect ' + qTwinType + ' points');
-} else {
-  alert('Double check your spelling next time, whatever that was, it wasn\'t right. Courtney is an identical twin.');
-  qTwinType = 0;
+  } else {
+    alert('Double check your spelling next time, whatever that was, it wasn\'t right. Courtney is an identical twin.');
+    qTwinType = 0;
   // console.log('Q2 (ident/frat?): invalid answer ' + qTwinType + ' points');
+  }
 }
-
+askTwinTypeQuestion();
 //========================question 3 - joke ========================
 var jokeYN= prompt('Does she like bad jokes? (yes or no)').toLowerCase();
 
