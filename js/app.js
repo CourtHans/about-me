@@ -3,16 +3,16 @@
 /*
 About Courtney
 
-Ask user his/her name through prompt()
-Display username back through customized greeting
-Display user name back in final message to user
+Add 6th question: "How many days has Courtney gone without a shower? You have four tries to get it right!
+Alert "too high" and "too low"
+4 tries after all attempts, provide correct answer
+While loop?
 
-Does Courtney have an identical twin?
-Is she an identical or fraternal twin?
-Does Courtney love bad jokes?
-Does Courtney have kids?
-Does Courtney know how to write wicked good code?
-How old is Courtney? (just for fun)
+Add 7th question: "Can you name one of the 20 countries (outside the U.S.) that Courtney has traveled to? You have 6 attempts at a correct answer."
+6 attempts, then display possible answers
+Array loop?
+
+Keep track of correct answers, at the end, tell them how many (out of 7) they got right.
 */
 
 var userName = prompt('What\'s your preferred name?');
@@ -105,16 +105,34 @@ if (codeYN === 'yes' || codeYN === 'y') {
   alert('Was a "y" or "n" too difficult? C\'mon, ' + userName + ', you\'re better than that! For the record, Courtney can code LIKE A MOTHER!');
 }
 
-//============bonus question============
-// var guessCourtneyAge = prompt('If you HAD to guess, how old (or young!) do you think Courtney is?')
-// var guessCourtneyAgeAsANumber = parseInt(guessCourtneyAge);
+//============question 6============
+//special thanks to Matt Herriges and Richard Lee for help here
+var triesShowerDays = 0;
+var guessShowerDays;
+var answerShowerText = 'Courtney actually went 28 days without a shower while on a backpacking expedition through the North Rim of the Grand Canyon. Gross, I know.';
 
-// if (guessCourtneyAgeAsANumber > 39 && guessCourtneyAgeAsANumber < 49) {
-//   alert('You\'re pretty close, we\'ll call it good!');
-// } else if(guessCourtneyAgeAsANumber <= 39) {
-//   alert('Aren\'t you the flatterer?');
-// } else if (guessCourtneyAgeAsANumber >= 49){
-//   alert('Hmm, you think so? Guess I need a better skin care regimen. Noted.');
-// } else {
-//   alert('Age is just a number. So enter one, please.');
-// }
+while (triesShowerDays < 4 && guessShowerDaysAsANumber !== 28){
+  guessShowerDays = prompt('What\'s the record number of days Courtney\'s ever gone without a shower? You\'ll have four tries to get it right.');
+  var guessShowerDaysAsANumber = parseInt (guessShowerDays);
+  // console.log (typeof(guessShowerDaysAsANumber));
+  if (guessShowerDaysAsANumber === 28){
+    alert('WOW - you got it right, ' + userName + '! Yes, ' + answerShowerText);
+  } else if (guessShowerDaysAsANumber >= 29 && guessShowerDaysAsANumber < 34) {
+    alert('You\'re just a little high, keep guessing.');
+  } else if (guessShowerDaysAsANumber >= 34) {
+    alert('Ew, no. Not THAT long. You\'re guessing way too high');
+  } else if (guessShowerDaysAsANumber < 28 && guessShowerDaysAsANumber > 22){
+    alert('You\'re just a tad low, keep guessing.');
+  } else if (guessShowerDaysAsANumber <= 22){
+    alert('You\'ll have to try harder. It was WAY longer than that.');
+  } else {
+    alert('C\'mon! Guess a number!');
+  }
+  triesShowerDays++;
+  console.log(triesShowerDays);
+
+}
+if (triesShowerDays === 4 && guessShowerDaysAsANumber !== 28){
+  alert('I\'m sorry, you\'ve exhausted your guesses. ' + answerShowerText);
+}
+
