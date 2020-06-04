@@ -24,6 +24,7 @@ var qJoke = 1;
 var qSummit = 1;
 var qCode = 1;
 var qShower = 1;
+var qCountry = 1;
 
 //====================welcome to the page===================
 alert('Welcome to my page, ' + userName + ', let\'s see how much you already know about Courtney...');
@@ -155,29 +156,31 @@ function askShowerQuestion(){
 }
 askShowerQuestion();
 //========================question 7 - country========================
-var countryArray = ['australia', 'austria', 'belgium', 'canada', 'chile', 'czech republic', 'czechrepublic', 'france', 'germany', 'hungary', 'iceland', 'indonesia', 'ireland', 'italy', 'luxembourg', 'mexico', 'netherlands', 'new zealand', 'newzealand', 'norway', 'peru', 'spain', 'united kingdom', 'unitedkingdom', 'vietnam'];
-var guessAttempts = 0;
+function askCountryQuestion(){
+  var countryArray = ['australia', 'austria', 'belgium', 'canada', 'chile', 'czech republic', 'czechrepublic', 'france', 'germany', 'hungary', 'iceland', 'indonesia', 'ireland', 'italy', 'luxembourg', 'mexico', 'netherlands', 'new zealand', 'newzealand', 'norway', 'peru', 'spain', 'united kingdom', 'unitedkingdom', 'vietnam'];
+  var guessAttempts = 0;
 
-for (var guess = 0; guess < 6; guess++){
-  var countryAttemptsLeft = 6 - guessAttempts;
-  var countryAnswer = prompt('Guess a country (outside the U.S.) that Courtney\'s been to? (attempts left: ' + countryAttemptsLeft + ')').toLowerCase();
+  for (var guess = 0; guess < 6; guess++){
+    var countryAttemptsLeft = 6 - guessAttempts;
+    var countryAnswer = prompt('Guess a country (outside the U.S.) that Courtney\'s been to? (attempts left: ' + countryAttemptsLeft + ')').toLowerCase();
 
-  if (countryAnswer === countryArray[0] || countryAnswer === countryArray[1] || countryAnswer === countryArray [2] || countryAnswer === countryArray[3] || countryAnswer === countryArray[4] || countryAnswer === countryArray[5] || countryAnswer === countryArray[6] || countryAnswer === countryArray[7] || countryAnswer === countryArray[8] || countryAnswer === countryArray[9] || countryAnswer === countryArray[10] || countryAnswer === countryArray[11] || countryAnswer === countryArray[12] || countryAnswer === countryArray[13] || countryAnswer === countryArray[14] || countryAnswer === countryArray[15] || countryAnswer === countryArray[16] || countryAnswer === countryArray[17] || countryAnswer === countryArray[18] || countryAnswer === countryArray[19] || countryAnswer === countryArray[20] || countryAnswer === countryArray[21]){
-    alert('Yes! That is one of the 22 countries Courtney has been to! In case you\'re curious, here\'s the full list: Australia, Austria, Belgium, Canada, Czech Republic, France, Germany, Hungary, Iceland, Indonesia, Ireland, Italy, Luxembourg, Mexico, Netherlands, New Zealand, Norway, Spain, United Kingdom, and Vietnam.');
-    var qCountry = 1;
-    // console.log ('QCountry (country?): correct ' + qCountry + ' point: ' + guessAttempts + ' attempt(s)');
-    break;
-  } else {
-    alert('Nope, she hasn\'t been there...yet.');
-    qCountry = 0;
+    if (countryAnswer === countryArray[0] || countryAnswer === countryArray[1] || countryAnswer === countryArray [2] || countryAnswer === countryArray[3] || countryAnswer === countryArray[4] || countryAnswer === countryArray[5] || countryAnswer === countryArray[6] || countryAnswer === countryArray[7] || countryAnswer === countryArray[8] || countryAnswer === countryArray[9] || countryAnswer === countryArray[10] || countryAnswer === countryArray[11] || countryAnswer === countryArray[12] || countryAnswer === countryArray[13] || countryAnswer === countryArray[14] || countryAnswer === countryArray[15] || countryAnswer === countryArray[16] || countryAnswer === countryArray[17] || countryAnswer === countryArray[18] || countryAnswer === countryArray[19] || countryAnswer === countryArray[20] || countryAnswer === countryArray[21] || countryAnswer === countryArray[22] || countryAnswer === countryArray[23] || countryAnswer === countryArray[24]){
+      alert('Yes! That is one of the 22 countries Courtney has been to! In case you\'re curious, here\'s the full list: Australia, Austria, Belgium, Canada, Czech Republic, France, Germany, Hungary, Iceland, Indonesia, Ireland, Italy, Luxembourg, Mexico, Netherlands, New Zealand, Norway, Spain, United Kingdom, and Vietnam.');
+      // console.log ('QCountry (country?): correct ' + qCountry + ' point: ' + guessAttempts + ' attempt(s)');
+      break;
+    } else {
+      alert('Nope, she hasn\'t been there...yet.');
+      qCountry = 0;
+    }
+
+    guessAttempts++;
   }
-
-  guessAttempts++;
-}
-if (guessAttempts === 6){
-  alert('Wow. Courtney\'s been to 22 countries, and you couldn\'t guess one? Here\'s the full list: Australia, Austria, Belgium, Canada, Czech Republic, France, Germany, Hungary, Iceland, Indonesia, Ireland, Italy, Luxembourg, Mexico, Netherlands, New Zealand, Norway, Spain, United Kingdom, and Vietnam.');
+  if (guessAttempts === 6){
+    alert('Wow. Courtney\'s been to 22 countries, and you couldn\'t guess one? Here\'s the full list: Australia, Austria, Belgium, Canada, Czech Republic, France, Germany, Hungary, Iceland, Indonesia, Ireland, Italy, Luxembourg, Mexico, Netherlands, New Zealand, Norway, Spain, United Kingdom, and Vietnam.');
   // console.log('QCountry (country?): incorrect ' + qCountry + ' points: ' + guessAttempts + ' attempt(s)');
+  }
 }
+askCountryQuestion();
 //========================final tally========================
 finalScore = qTwin + qTwinType + qJoke + qSummit + qCode + qShower + qCountry;
 
