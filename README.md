@@ -1,9 +1,10 @@
 # about-me
 ***201 Lab 2 assignment***  
-An About Me website with a quiz! The user should be asked their name and the website should "appear" to be talking to them via question and response. There is real time feedback so the user knows if they've gotten the answer correct, incorrect, or provided an invalid response. At the end, the user receives their final score and some commentary (depending on how they did).
+An About Me website with a quiz! The user should be asked their name and the website should "appear" to be talking to them via question and response. There is real time feedback so the user knows if they've gotten the answer correct, incorrect, or provided an invalid response. At the end, the user receives their final score and some commentary (depending on how they did). All questions wrapped in functions that are invoked at the end of the JS code.
 Photo gallery at the bottom of the page provides a bit more interaction, as photos colorize and enlarge when the user's mouse hovers over them.
 
 ## Author: Courtney Hans
+  - Paired Programming with Jennifer Chinzi
 
 ## Links and Resources
 Helpful links that taught me new code...
