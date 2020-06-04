@@ -14,9 +14,11 @@ Array loop?
 
 Keep track of correct answers, at the end, tell them how many (out of 7) they got right.
 */
+// ====================Global Variables=======================
 
 var userName = prompt('What\'s your preferred name?');
 var finalScore; //for final tally
+var qTwin = 1;
 
 //====================welcome to the page===================
 alert('Welcome to my page, ' + userName + ', let\'s see how much you already know about Courtney...');
@@ -28,7 +30,6 @@ function askTwinQuestion(){
 
   if (twinYN === 'yes' || twinYN === 'y') {
     alert('You\'re right, she IS a twin!');
-    var qTwin = 1;
   // console.log ('Q1 (twin?): correct ' + qTwin + ' point');
   } else if (twinYN === 'no' || twinYN === 'n') {
     alert('Wrong, she IS a twin.');
