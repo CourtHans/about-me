@@ -182,33 +182,38 @@ function askCountryQuestion(){
 }
 askCountryQuestion();
 //========================final tally========================
-finalScore = qTwin + qTwinType + qJoke + qSummit + qCode + qShower + qCountry;
+function reportFinalTally(){
+  finalScore = qTwin + qTwinType + qJoke + qSummit + qCode + qShower + qCountry;
 
-if (finalScore >= 6){
-  alert('Wow ' + userName + ', you scored ' + finalScore + ' out of 7 - GREAT job!');
-} else if (finalScore < 6 && finalScore >= 4){
-  alert('You scored ' + finalScore + ' out of 7. Mediocre job, ' + userName + '.');
-} else {
-  alert('Hate to break it to you, ' + userName + ', but you got ' + finalScore + ' out of 7 right. Ah well, growth mindset, right?');
+  if (finalScore >= 6){
+    alert('Wow ' + userName + ', you scored ' + finalScore + ' out of 7 - GREAT job!');
+  } else if (finalScore < 6 && finalScore >= 4){
+    alert('You scored ' + finalScore + ' out of 7. Mediocre job, ' + userName + '.');
+  } else {
+    alert('Hate to break it to you, ' + userName + ', but you got ' + finalScore + ' out of 7 right. Ah well, growth mindset, right?');
   // console.log('final score: ' + finalScore);
+  }
 }
-
+reportFinalTally();
 // ========for fun greeting and score at the bottom of the page=========
-var today = new Date();
-var hourNow = today.getHours();
-var greeting;
+function writeFunGreeting(){
+  var today = new Date();
+  var hourNow = today.getHours();
+  var greeting;
 
-if (hourNow > 18) {
-  greeting = 'Buonasera, ';
-} else if (hourNow > 12) {
-  greeting = 'Buon pomeriggio, ';
-} else if (hourNow > 0) {
-  greeting = 'Buongiorno, ';
-} else {
-  greeting = 'Bienvenuto, ';
+  if (hourNow > 18) {
+    greeting = 'Buonasera, ';
+  } else if (hourNow > 12) {
+    greeting = 'Buon pomeriggio, ';
+  } else if (hourNow > 0) {
+    greeting = 'Buongiorno, ';
+  } else {
+    greeting = 'Bienvenuto, ';
+  }
+
+  document.write('<h2>' + greeting + userName + '! Your final score was ' + finalScore + '/7.</h2>');
 }
-
-document.write('<h2>' + greeting + userName + '! Your final score was ' + finalScore + '/7.</h2>');
+writeFunGreeting();
 
 // ========Function Invocations=========
 
