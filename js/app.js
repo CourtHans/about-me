@@ -21,6 +21,7 @@ var finalScore; //for final tally
 var qTwin = 1;
 var qTwinType = 1;
 var qJoke = 1;
+var qSummit = 1;
 
 //====================welcome to the page===================
 alert('Welcome to my page, ' + userName + ', let\'s see how much you already know about Courtney...');
@@ -81,22 +82,23 @@ function askJokeQuestion(){
 }
 askJokeQuestion();
 //========================question 4 - summit========================
-var summitYN= prompt('Has Courtney summitted Mt. Kilamanjaro? (yes or no)?').toLowerCase();
+function askSummitQuestion(){
+  var summitYN= prompt('Has Courtney summitted Mt. Kilamanjaro? (yes or no)?').toLowerCase();
 
-if (summitYN === 'no' || summitYN === 'n') {
-  alert('You\'re right, she hasn\'t climbed Africa\'s tallest peak yet - but she hopes to soon!');
-  var qSummit = 1;
+  if (summitYN === 'no' || summitYN === 'n') {
+    alert('You\'re right, she hasn\'t climbed Africa\'s tallest peak yet - but she hopes to soon!');
   // console.log ('qSummit (summit?): correct ' + qSummit + ' point');
-} else if (summitYN === 'yes' || summitYN === 'y') {
-  alert('Wrong. (But she wishes this were true.)');
-  qSummit = 0;
+  } else if (summitYN === 'yes' || summitYN === 'y') {
+    alert('Wrong. (But she wishes this were true.)');
+    qSummit = 0;
   // console.log('qSummit (summit?): incorrect ' + qSummit + ' points');
-} else {
-  alert('It was a simple yes or no. If you\'re curious, she hasn\'t yet summited Mt. Kilamajaro - but she hopes to one day!');
-  qSummit = 0;
+  } else {
+    alert('It was a simple yes or no. If you\'re curious, she hasn\'t yet summited Mt. Kilamajaro - but she hopes to one day!');
+    qSummit = 0;
   // console.log('qSummit (summit?): invalid answer ' + qSummit + ' points');
+  }
 }
-
+askSummitQuestion();
 //========================question 5 - code ========================
 var codeYN= prompt('Next up: can Courtney code? (yes or no)').toLowerCase();
 
