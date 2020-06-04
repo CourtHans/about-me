@@ -22,6 +22,7 @@ var qTwin = 1;
 var qTwinType = 1;
 var qJoke = 1;
 var qSummit = 1;
+var qCode = 1;
 
 //====================welcome to the page===================
 alert('Welcome to my page, ' + userName + ', let\'s see how much you already know about Courtney...');
@@ -100,22 +101,23 @@ function askSummitQuestion(){
 }
 askSummitQuestion();
 //========================question 5 - code ========================
-var codeYN= prompt('Next up: can Courtney code? (yes or no)').toLowerCase();
+function askCodeQuestion(){
+  var codeYN= prompt('Next up: can Courtney code? (yes or no)').toLowerCase();
 
-if (codeYN === 'yes' || codeYN === 'y') {
-  alert('DANG STRAIGHT SHE CAN - like a MOTHER! ' + userName + ', you must know her well!');
-  var qCode = 1;
+  if (codeYN === 'yes' || codeYN === 'y') {
+    alert('DANG STRAIGHT SHE CAN - like a MOTHER! ' + userName + ', you must know her well!');
   // console.log ('qCode (code?): correct ' + qCode + ' point');
-} else if (codeYN === 'no' || codeYN === 'n') {
-  alert(userName + ', really? OF COURSE SHE CAN!');
-  qCode = 0;
+  } else if (codeYN === 'no' || codeYN === 'n') {
+    alert(userName + ', really? OF COURSE SHE CAN!');
+    qCode = 0;
   // console.log('qCode (code?): incorrect ' + qCode + ' points');
-} else {
-  alert('Was a "y" or "n" too difficult? C\'mon, ' + userName + ', you\'re better than that! For the record, Courtney can code LIKE A MOTHER!');
-  qCode = 0;
+  } else {
+    alert('Was a "y" or "n" too difficult? C\'mon, ' + userName + ', you\'re better than that! For the record, Courtney can code LIKE A MOTHER!');
+    qCode = 0;
   // console.log('qCode (code?): invalid answer ' + qCode + ' points');
+  }
 }
-
+askCodeQuestion();
 //========================question 6 - shower========================
 //special thanks to Matt Herriges and Richard Lee for help here
 var triesShowerDays = 0;
