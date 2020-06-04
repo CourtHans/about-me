@@ -23,6 +23,7 @@ var qTwinType = 1;
 var qJoke = 1;
 var qSummit = 1;
 var qCode = 1;
+var qShower = 1;
 
 //====================welcome to the page===================
 alert('Welcome to my page, ' + userName + ', let\'s see how much you already know about Courtney...');
@@ -120,37 +121,39 @@ function askCodeQuestion(){
 askCodeQuestion();
 //========================question 6 - shower========================
 //special thanks to Matt Herriges and Richard Lee for help here
-var triesShowerDays = 0;
-var guessShowerDays;
-var answerShowerText = 'Courtney actually went 28 days without a shower while on a backpacking expedition through the North Rim of the Grand Canyon. Gross, I know.';
+function askShowerQuestion(){
 
-while (triesShowerDays < 4 && guessShowerDaysAsANumber !== 28){
-  var attemptsLeft = 4 - triesShowerDays;
-  guessShowerDays = prompt('What\'s the record number of days Courtney\'s ever gone without a shower? (attempts left: ' +attemptsLeft + ')');
-  var guessShowerDaysAsANumber = parseInt (guessShowerDays);
-  if (guessShowerDaysAsANumber === 28){
-    alert('WOW - you got it right, ' + userName + '! Yes, ' + answerShowerText);
-    var qShower = 1;
+  var triesShowerDays = 0;
+  var guessShowerDays;
+  var answerShowerText = 'Courtney actually went 28 days without a shower while on a backpacking expedition through the North Rim of the Grand Canyon. Gross, I know.';
+
+  while (triesShowerDays < 4 && guessShowerDaysAsANumber !== 28){
+    var attemptsLeft = 4 - triesShowerDays;
+    guessShowerDays = prompt('What\'s the record number of days Courtney\'s ever gone without a shower? (attempts left: ' +attemptsLeft + ')');
+    var guessShowerDaysAsANumber = parseInt (guessShowerDays);
+    if (guessShowerDaysAsANumber === 28){
+      alert('WOW - you got it right, ' + userName + '! Yes, ' + answerShowerText);
     // console.log ('qShower (shower?): correct ' + qShower + ' point: ' + triesShowerDays + ' attempt(s)');
-  } else if (guessShowerDaysAsANumber >= 29 && guessShowerDaysAsANumber < 34) {
-    alert('You\'re just a little high.');
-  } else if (guessShowerDaysAsANumber >= 34) {
-    alert('Ew, no. Not THAT long. You\'ve guessed way too high');
-  } else if (guessShowerDaysAsANumber < 28 && guessShowerDaysAsANumber > 21){
-    alert('You\'re just a tad low.');
-  } else if (guessShowerDaysAsANumber <= 21){
-    alert('Nuh uh. It was WAY longer than that.');
-  } else {
-    alert('C\'mon! Guess a number!');
+    } else if (guessShowerDaysAsANumber >= 29 && guessShowerDaysAsANumber < 34) {
+      alert('You\'re just a little high.');
+    } else if (guessShowerDaysAsANumber >= 34) {
+      alert('Ew, no. Not THAT long. You\'ve guessed way too high');
+    } else if (guessShowerDaysAsANumber < 28 && guessShowerDaysAsANumber > 21){
+      alert('You\'re just a tad low.');
+    } else if (guessShowerDaysAsANumber <= 21){
+      alert('Nuh uh. It was WAY longer than that.');
+    } else {
+      alert('C\'mon! Guess a number!');
+    }
+    triesShowerDays++;
   }
-  triesShowerDays++;
-}
-if (triesShowerDays === 4 && guessShowerDaysAsANumber !== 28){
-  alert('I\'m sorry, ' + userName + ', you\'ve exhausted your guesses. ' + answerShowerText);
-  qShower = 0;
+  if (triesShowerDays === 4 && guessShowerDaysAsANumber !== 28){
+    alert('I\'m sorry, ' + userName + ', you\'ve exhausted your guesses. ' + answerShowerText);
+    qShower = 0;
   // console.log('qShower (shower?): incorrect ' + qShower + ' points: ' + triesShowerDays + ' attempt(s)');
+  }
 }
-
+askShowerQuestion();
 //========================question 7 - country========================
 var countryArray = ['australia', 'austria', 'belgium', 'canada', 'chile', 'czech republic', 'czechrepublic', 'france', 'germany', 'hungary', 'iceland', 'indonesia', 'ireland', 'italy', 'luxembourg', 'mexico', 'netherlands', 'new zealand', 'newzealand', 'norway', 'peru', 'spain', 'united kingdom', 'unitedkingdom', 'vietnam'];
 var guessAttempts = 0;
