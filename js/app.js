@@ -107,31 +107,47 @@ var userName = prompt('What\'s your preferred name?');
 
 // //============question 6============
 // //special thanks to Matt Herriges and Richard Lee for help here
-var triesShowerDays = 0;
-var guessShowerDays;
-var answerShowerText = 'Courtney actually went 28 days without a shower while on a backpacking expedition through the North Rim of the Grand Canyon. Gross, I know.';
+// var triesShowerDays = 0;
+// var guessShowerDays;
+// var answerShowerText = 'Courtney actually went 28 days without a shower while on a backpacking expedition through the North Rim of the Grand Canyon. Gross, I know.';
 
-while (triesShowerDays < 4 && guessShowerDaysAsANumber !== 28){
-  var attemptsLeft = 4 - triesShowerDays;
-  guessShowerDays = prompt('What\'s the record number of days Courtney\'s ever gone without a shower? Attempts left: ' +attemptsLeft);
-  var guessShowerDaysAsANumber = parseInt (guessShowerDays);
-  if (guessShowerDaysAsANumber === 28){
-    alert('WOW - you got it right, ' + userName + '! Yes, ' + answerShowerText);
-  } else if (guessShowerDaysAsANumber >= 29 && guessShowerDaysAsANumber < 34) {
-    alert('You\'re just a little high.');
-  } else if (guessShowerDaysAsANumber >= 34) {
-    alert('Ew, no. Not THAT long. You\'ve guessed way too high');
-  } else if (guessShowerDaysAsANumber < 28 && guessShowerDaysAsANumber > 21){
-    alert('You\'re just a tad low.');
-  } else if (guessShowerDaysAsANumber <= 21){
-    alert('Nuh uh. It was WAY longer than that.');
-  } else {
-    alert('C\'mon! Guess a number!');
+// while (triesShowerDays < 4 && guessShowerDaysAsANumber !== 28){
+//   var attemptsLeft = 4 - triesShowerDays;
+//   guessShowerDays = prompt('What\'s the record number of days Courtney\'s ever gone without a shower? Attempts left: ' +attemptsLeft);
+//   var guessShowerDaysAsANumber = parseInt (guessShowerDays);
+//   if (guessShowerDaysAsANumber === 28){
+//     alert('WOW - you got it right, ' + userName + '! Yes, ' + answerShowerText);
+//   } else if (guessShowerDaysAsANumber >= 29 && guessShowerDaysAsANumber < 34) {
+//     alert('You\'re just a little high.');
+//   } else if (guessShowerDaysAsANumber >= 34) {
+//     alert('Ew, no. Not THAT long. You\'ve guessed way too high');
+//   } else if (guessShowerDaysAsANumber < 28 && guessShowerDaysAsANumber > 21){
+//     alert('You\'re just a tad low.');
+//   } else if (guessShowerDaysAsANumber <= 21){
+//     alert('Nuh uh. It was WAY longer than that.');
+//   } else {
+//     alert('C\'mon! Guess a number!');
+//   }
+//   triesShowerDays++;
+//   console.log(triesShowerDays);
+// }
+// if (triesShowerDays === 4 && guessShowerDaysAsANumber !== 28){
+//   alert('I\'m sorry, ' + userName + ', you\'ve exhausted your guess. ' + answerShowerText);
+// }
+
+var countryArray = ['australia', 'austria', 'belgium', 'canada', 'chile', 'czech republic', 'czechrepublic', 'france', 'germany', 'hungary', 'iceland', 'indonesia', 'ireland', 'italy', 'luxembourg', 'mexico', 'netherlands', 'new zealand', 'newzealand', 'norway', 'peru', 'spain', 'united kingdom', 'unitedkingdom', 'vietnam'];
+var guessAttempts = 0;
+
+for (var guess = 0; guess < 6; guess++){
+
+  var countryAnswer = prompt('Guess a country (outside the U.S.) that Courtney\'s been to?').toLowerCase();
+
+  if (countryAnswer === countryArray[0] || countryAnswer === countryArray[1] || countryAnswer === countryArray [2] || countryAnswer === countryArray[3] || countryAnswer === countryArray[4] || countryAnswer === countryArray[5] || countryAnswer === countryArray[6] || countryAnswer === countryArray[7] || countryAnswer === countryArray[8] || countryAnswer === countryArray[9] || countryAnswer === countryArray[10] || countryAnswer === countryArray[11] || countryAnswer === countryArray[12] || countryAnswer === countryArray[13] || countryAnswer === countryArray[14] || countryAnswer === countryArray[15] || countryAnswer === countryArray[16] || countryAnswer === countryArray[17] || countryAnswer === countryArray[18] || countryAnswer === countryArray[19] || countryAnswer === countryArray[20] || countryAnswer === countryArray[21]){
+    alert('Yes! That is one of the 22 countries Courtney has been too! Good job, ' + userName + '!');
+    break;
+  } else if (countryAnswer !== countryArray[0] || countryAnswer !== countryArray[1] || countryAnswer !== countryArray [2] || countryAnswer !== countryArray[3] || countryAnswer !== countryArray[4] || countryAnswer !== countryArray[5] || countryAnswer !== countryArray[6] || countryAnswer !== countryArray[7] || countryAnswer !== countryArray[8] || countryAnswer !== countryArray[9] || countryAnswer !== countryArray[10] || countryAnswer !== countryArray[11] || countryAnswer !== countryArray[12] || countryAnswer !== countryArray[13] || countryAnswer !== countryArray[14] || countryAnswer !== countryArray[15] || countryAnswer !== countryArray[16] || countryAnswer !== countryArray[17] || countryAnswer !== countryArray[18] || countryAnswer !== countryArray[19] || countryAnswer !== countryArray[20] || countryAnswer !== countryArray[21]){
+    alert('Nope, she hasn\'t been there... yet.');
   }
-  triesShowerDays++;
-  console.log(triesShowerDays);
 }
-if (triesShowerDays === 4 && guessShowerDaysAsANumber !== 28){
-  alert('I\'m sorry, ' + userName + ', you\'ve exhausted your guesses. ' + answerShowerText);
-}
+
 
