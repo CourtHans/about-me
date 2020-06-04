@@ -22,24 +22,26 @@ var finalScore; //for final tally
 alert('Welcome to my page, ' + userName + ', let\'s see how much you already know about Courtney...');
 
 
-//========================question 1========================
-var twinYN = prompt('Does Courtney have a twin? (yes or no)').toLowerCase();
+//========================question 1 - twin========================
+function askTwinQuestion(){
+  var twinYN = prompt('Does Courtney have a twin? (yes or no)').toLowerCase();
 
-if (twinYN === 'yes' || twinYN === 'y') {
-  alert('You\'re right, she IS a twin!');
-  var qTwin = 1;
+  if (twinYN === 'yes' || twinYN === 'y') {
+    alert('You\'re right, she IS a twin!');
+    var qTwin = 1;
   // console.log ('Q1 (twin?): correct ' + qTwin + ' point');
-} else if (twinYN === 'no' || twinYN === 'n') {
-  alert('Wrong, she IS a twin.');
-  qTwin = 0;
+  } else if (twinYN === 'no' || twinYN === 'n') {
+    alert('Wrong, she IS a twin.');
+    qTwin = 0;
   // console.log('Q1 (twin?): incorrect ' + qTwin + ' points');
-} else {
-  alert('This is a y or n question. For your information, she IS a twin.');
-  qTwin = 0;
+  } else {
+    alert('This is a y or n question. For your information, she IS a twin.');
+    qTwin = 0;
   // console.log('Q1 (twin?): invalid answer ' + qTwin + ' points');
+  }
 }
-
-//========================question 2========================
+askTwinQuestion();
+//========================question 2 - twin type========================
 var twinType= prompt('Now that you know, tell me...identical or fraternal twin?').toLowerCase();
 
 if (twinType === 'identical') {
@@ -56,7 +58,7 @@ if (twinType === 'identical') {
   // console.log('Q2 (ident/frat?): invalid answer ' + qTwinType + ' points');
 }
 
-//========================question 3========================
+//========================question 3 - joke ========================
 var jokeYN= prompt('Does she like bad jokes? (yes or no)').toLowerCase();
 
 if (jokeYN === 'yes' || jokeYN === 'y') {
@@ -73,7 +75,7 @@ if (jokeYN === 'yes' || jokeYN === 'y') {
   // console.log('QJoke (bad jokes?): invalid answer ' + qJoke + ' points');
 }
 
-//========================question 4========================
+//========================question 4 - summit========================
 var summitYN= prompt('Has Courtney summitted Mt. Kilamanjaro? (yes or no)?').toLowerCase();
 
 if (summitYN === 'no' || summitYN === 'n') {
@@ -90,7 +92,7 @@ if (summitYN === 'no' || summitYN === 'n') {
   // console.log('qSummit (summit?): invalid answer ' + qSummit + ' points');
 }
 
-//========================question 5========================
+//========================question 5 - code ========================
 var codeYN= prompt('Next up: can Courtney code? (yes or no)').toLowerCase();
 
 if (codeYN === 'yes' || codeYN === 'y') {
@@ -107,7 +109,7 @@ if (codeYN === 'yes' || codeYN === 'y') {
   // console.log('qCode (code?): invalid answer ' + qCode + ' points');
 }
 
-//========================question 6========================
+//========================question 6 - shower========================
 //special thanks to Matt Herriges and Richard Lee for help here
 var triesShowerDays = 0;
 var guessShowerDays;
@@ -140,7 +142,7 @@ if (triesShowerDays === 4 && guessShowerDaysAsANumber !== 28){
   // console.log('qShower (shower?): incorrect ' + qShower + ' points: ' + triesShowerDays + ' attempt(s)');
 }
 
-//========================question 7========================
+//========================question 7 - country========================
 var countryArray = ['australia', 'austria', 'belgium', 'canada', 'chile', 'czech republic', 'czechrepublic', 'france', 'germany', 'hungary', 'iceland', 'indonesia', 'ireland', 'italy', 'luxembourg', 'mexico', 'netherlands', 'new zealand', 'newzealand', 'norway', 'peru', 'spain', 'united kingdom', 'unitedkingdom', 'vietnam'];
 var guessAttempts = 0;
 
@@ -192,3 +194,7 @@ if (hourNow > 18) {
 }
 
 document.write('<h2>' + greeting + userName + '! Your final score was ' + finalScore + '/7.</h2>');
+
+// ========Function Invocations=========
+
+
