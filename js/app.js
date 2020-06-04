@@ -20,6 +20,7 @@ var userName = prompt('What\'s your preferred name?');
 var finalScore; //for final tally
 var qTwin = 1;
 var qTwinType = 1;
+var qJoke = 1;
 
 //====================welcome to the page===================
 alert('Welcome to my page, ' + userName + ', let\'s see how much you already know about Courtney...');
@@ -62,22 +63,23 @@ function askTwinTypeQuestion(){
 }
 askTwinTypeQuestion();
 //========================question 3 - joke ========================
-var jokeYN= prompt('Does she like bad jokes? (yes or no)').toLowerCase();
+function askJokeQuestion(){
+  var jokeYN= prompt('Does she like bad jokes? (yes or no)').toLowerCase();
 
-if (jokeYN === 'yes' || jokeYN === 'y') {
-  alert('Like them? More like LOVES them!');
-  var qJoke = 1;
+  if (jokeYN === 'yes' || jokeYN === 'y') {
+    alert('Like them? More like LOVES them!');
   // console.log ('QJoke (bad jokes?): correct ' + qJoke + ' point');
-} else if (jokeYN === 'no' || jokeYN === 'n') {
-  alert('For better or for worse, I\'m embarassed to say she LOVES them.');
-  qJoke = 0;
+  } else if (jokeYN === 'no' || jokeYN === 'n') {
+    alert('For better or for worse, I\'m embarrassed to say she LOVES them.');
+    qJoke = 0;
   // console.log('QJoke (bad jokes?): incorrect ' + qJoke + ' points');
-} else {
-  alert('Invalid input - you were supposed to write yes or no. As for bad jokes? She LOVES \'em.');
-  qJoke = 0;
+  } else {
+    alert('Invalid input - you were supposed to write yes or no. As for bad jokes? She LOVES \'em.');
+    qJoke = 0;
   // console.log('QJoke (bad jokes?): invalid answer ' + qJoke + ' points');
+  }
 }
-
+askJokeQuestion();
 //========================question 4 - summit========================
 var summitYN= prompt('Has Courtney summitted Mt. Kilamanjaro? (yes or no)?').toLowerCase();
 
