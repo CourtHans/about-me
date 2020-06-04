@@ -139,8 +139,8 @@ var countryArray = ['australia', 'austria', 'belgium', 'canada', 'chile', 'czech
 var guessAttempts = 0;
 
 for (var guess = 0; guess < 6; guess++){
-
-  var countryAnswer = prompt('Guess a country (outside the U.S.) that Courtney\'s been to?').toLowerCase();
+  var countryAttemptsLeft = 6 - guessAttempts;
+  var countryAnswer = prompt('Guess a country (outside the U.S.) that Courtney\'s been to? Attempts left: ' + countryAttemptsLeft).toLowerCase();
 
   if (countryAnswer === countryArray[0] || countryAnswer === countryArray[1] || countryAnswer === countryArray [2] || countryAnswer === countryArray[3] || countryAnswer === countryArray[4] || countryAnswer === countryArray[5] || countryAnswer === countryArray[6] || countryAnswer === countryArray[7] || countryAnswer === countryArray[8] || countryAnswer === countryArray[9] || countryAnswer === countryArray[10] || countryAnswer === countryArray[11] || countryAnswer === countryArray[12] || countryAnswer === countryArray[13] || countryAnswer === countryArray[14] || countryAnswer === countryArray[15] || countryAnswer === countryArray[16] || countryAnswer === countryArray[17] || countryAnswer === countryArray[18] || countryAnswer === countryArray[19] || countryAnswer === countryArray[20] || countryAnswer === countryArray[21]){
     alert('Yes! That is one of the 22 countries Courtney has been too! Good job, ' + userName + '!');
@@ -148,6 +148,11 @@ for (var guess = 0; guess < 6; guess++){
   } else if (countryAnswer !== countryArray[0] || countryAnswer !== countryArray[1] || countryAnswer !== countryArray [2] || countryAnswer !== countryArray[3] || countryAnswer !== countryArray[4] || countryAnswer !== countryArray[5] || countryAnswer !== countryArray[6] || countryAnswer !== countryArray[7] || countryAnswer !== countryArray[8] || countryAnswer !== countryArray[9] || countryAnswer !== countryArray[10] || countryAnswer !== countryArray[11] || countryAnswer !== countryArray[12] || countryAnswer !== countryArray[13] || countryAnswer !== countryArray[14] || countryAnswer !== countryArray[15] || countryAnswer !== countryArray[16] || countryAnswer !== countryArray[17] || countryAnswer !== countryArray[18] || countryAnswer !== countryArray[19] || countryAnswer !== countryArray[20] || countryAnswer !== countryArray[21]){
     alert('Nope, she hasn\'t been there... yet.');
   }
+  guessAttempts++;
+  console.log('country guess attempts,' + guessAttempts);
+}
+if (guessAttempts === 6){
+  alert('Wow. Courtney\'s been to 22 countries, and you couldn\'t guess one? Here\'s the full list: Australia, Austria, Belgium, Canada, Czech Republic, France, Germany, Hungary, Iceland, Indonesia, Ireland, Italy, Luxembourg, Mexico, Netherlands, New Zealand, Norway, Spain, United Kingdom, and Vietnam.');
 }
 
 
