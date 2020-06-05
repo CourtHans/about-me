@@ -24,7 +24,7 @@ var qJoke = 1;
 var qSummit = 1;
 var qCode = 1;
 var qShower = 1;
-var qCountry = 1;
+var qCountry = 0;
 
 //====================welcome to the page===================
 alert('Welcome to my page, ' + userName + ', let\'s see how much you already know about Courtney...');
@@ -36,15 +36,15 @@ function askTwinQuestion(){
 
   if (twinYN === 'yes' || twinYN === 'y') {
     alert('You\'re right, she IS a twin!');
-  // console.log ('Q1 (twin?): correct ' + qTwin + ' point');
+  // console.log ('QTwin: correct ' + qTwin + ' point');
   } else if (twinYN === 'no' || twinYN === 'n') {
     alert('Wrong, she IS a twin.');
     qTwin = 0;
-  // console.log('Q1 (twin?): incorrect ' + qTwin + ' points');
+  // console.log('QTwin?: incorrect ' + qTwin + ' points');
   } else {
     alert('This is a y or n question. For your information, she IS a twin.');
     qTwin = 0;
-  // console.log('Q1 (twin?): invalid answer ' + qTwin + ' points');
+  // console.log('QTwin?: invalid answer ' + qTwin + ' points');
   }
 }
 //========================question 2 - twin type========================
@@ -53,15 +53,15 @@ function askTwinTypeQuestion(){
 
   if (twinType === 'identical') {
     alert('Correct! Courtney\'s an identical twin (also known as monozygous).');
-  // console.log ('Q2 (ident/frat?): correct ' + qTwinType + ' point');
+  // console.log ('QTwinType: correct ' + qTwinType + ' point');
   } else if (twinType === 'fraternal') {
     alert('Incorrect. Courtney is an IDENTICAL twin. Fun fact: fraternal twins are known as "dizygous twins."');
     qTwinType = 0;
-  // console.log('Q2 (ident/frat?): incorrect ' + qTwinType + ' points');
+  // console.log('QTwinType: incorrect ' + qTwinType + ' points');
   } else {
     alert('Double check your spelling next time, whatever that was, it wasn\'t right. Courtney is an identical twin.');
     qTwinType = 0;
-  // console.log('Q2 (ident/frat?): invalid answer ' + qTwinType + ' points');
+  // console.log('QTwinType: invalid answer ' + qTwinType + ' points');
   }
 }
 //========================question 3 - joke ========================
@@ -70,15 +70,15 @@ function askJokeQuestion(){
 
   if (jokeYN === 'yes' || jokeYN === 'y') {
     alert('Like them? More like LOVES them!');
-  // console.log ('QJoke (bad jokes?): correct ' + qJoke + ' point');
+  // console.log ('QJoke: correct ' + qJoke + ' point');
   } else if (jokeYN === 'no' || jokeYN === 'n') {
     alert('For better or for worse, I\'m embarrassed to say she LOVES them.');
     qJoke = 0;
-  // console.log('QJoke (bad jokes?): incorrect ' + qJoke + ' points');
+  // console.log('QJoke: incorrect ' + qJoke + ' points');
   } else {
     alert('Invalid input - you were supposed to write yes or no. As for bad jokes? She LOVES \'em.');
     qJoke = 0;
-  // console.log('QJoke (bad jokes?): invalid answer ' + qJoke + ' points');
+  // console.log('QJoke: invalid answer ' + qJoke + ' points');
   }
 }
 //========================question 4 - summit========================
@@ -87,15 +87,15 @@ function askSummitQuestion(){
 
   if (summitYN === 'no' || summitYN === 'n') {
     alert('You\'re right, she hasn\'t climbed Africa\'s tallest peak yet - but she hopes to soon!');
-  // console.log ('qSummit (summit?): correct ' + qSummit + ' point');
+  // console.log ('QSummit: correct ' + qSummit + ' point');
   } else if (summitYN === 'yes' || summitYN === 'y') {
     alert('Wrong. (But she wishes this were true.)');
     qSummit = 0;
-  // console.log('qSummit (summit?): incorrect ' + qSummit + ' points');
+  // console.log('QSummit: incorrect ' + qSummit + ' points');
   } else {
     alert('It was a simple yes or no. If you\'re curious, she hasn\'t yet summited Mt. Kilamajaro - but she hopes to one day!');
     qSummit = 0;
-  // console.log('qSummit (summit?): invalid answer ' + qSummit + ' points');
+  // console.log('QSummit: invalid answer ' + qSummit + ' points');
   }
 }
 //========================question 5 - code ========================
@@ -104,15 +104,15 @@ function askCodeQuestion(){
 
   if (codeYN === 'yes' || codeYN === 'y') {
     alert('DANG STRAIGHT SHE CAN - like a MOTHER! ' + userName + ', you must know her well!');
-  // console.log ('qCode (code?): correct ' + qCode + ' point');
+  // console.log ('QCode: correct ' + qCode + ' point');
   } else if (codeYN === 'no' || codeYN === 'n') {
     alert(userName + ', really? OF COURSE SHE CAN!');
     qCode = 0;
-  // console.log('qCode (code?): incorrect ' + qCode + ' points');
+  // console.log('QCode: incorrect ' + qCode + ' points');
   } else {
     alert('Was a "y" or "n" too difficult? C\'mon, ' + userName + ', you\'re better than that! For the record, Courtney can code LIKE A MOTHER!');
     qCode = 0;
-  // console.log('qCode (code?): invalid answer ' + qCode + ' points');
+  // console.log('QCode: invalid answer ' + qCode + ' points');
   }
 }
 //========================question 6 - shower========================
@@ -129,7 +129,7 @@ function askShowerQuestion(){
     var guessShowerDaysAsANumber = parseInt (guessShowerDays);
     if (guessShowerDaysAsANumber === 28){
       alert('WOW - you got it right, ' + userName + '! Yes, ' + answerShowerText);
-    // console.log ('qShower (shower?): correct ' + qShower + ' point: ' + triesShowerDays + ' attempt(s)');
+    // console.log ('QShower: correct ' + qShower + ' point: ' + triesShowerDays + ' attempt(s)');
     } else if (guessShowerDaysAsANumber >= 29 && guessShowerDaysAsANumber < 34) {
       alert('You\'re just a little high.');
     } else if (guessShowerDaysAsANumber >= 34) {
@@ -146,7 +146,7 @@ function askShowerQuestion(){
   if (triesShowerDays === 4 && guessShowerDaysAsANumber !== 28){
     alert('I\'m sorry, ' + userName + ', you\'ve exhausted your guesses. ' + answerShowerText);
     qShower = 0;
-  // console.log('qShower (shower?): incorrect ' + qShower + ' points: ' + triesShowerDays + ' attempt(s)');
+  // console.log('QShower: incorrect ' + qShower + ' points: ' + triesShowerDays + ' attempt(s)');
   }
 }
 //========================question 7 - country========================
@@ -156,22 +156,23 @@ function askCountryQuestion(){
 
   for (var guess = 0; guess < 6; guess++){
     var countryAttemptsLeft = 6 - guessAttempts;
+    var attemptCounter = guessAttempts + 1;
     var countryAnswer = prompt('Guess a country (outside the U.S.) that Courtney\'s been to? (attempts left: ' + countryAttemptsLeft + ')').toLowerCase();
 
     if (countryAnswer === countryArray[0] || countryAnswer === countryArray[1] || countryAnswer === countryArray [2] || countryAnswer === countryArray[3] || countryAnswer === countryArray[4] || countryAnswer === countryArray[5] || countryAnswer === countryArray[6] || countryAnswer === countryArray[7] || countryAnswer === countryArray[8] || countryAnswer === countryArray[9] || countryAnswer === countryArray[10] || countryAnswer === countryArray[11] || countryAnswer === countryArray[12] || countryAnswer === countryArray[13] || countryAnswer === countryArray[14] || countryAnswer === countryArray[15] || countryAnswer === countryArray[16] || countryAnswer === countryArray[17] || countryAnswer === countryArray[18] || countryAnswer === countryArray[19] || countryAnswer === countryArray[20] || countryAnswer === countryArray[21] || countryAnswer === countryArray[22] || countryAnswer === countryArray[23] || countryAnswer === countryArray[24]){
       alert('Yes! That is one of the 22 countries Courtney has been to! In case you\'re curious, here\'s the full list: Australia, Austria, Belgium, Canada, Czech Republic, France, Germany, Hungary, Iceland, Indonesia, Ireland, Italy, Luxembourg, Mexico, Netherlands, New Zealand, Norway, Spain, United Kingdom, and Vietnam.');
-      // console.log ('QCountry (country?): correct ' + qCountry + ' point: ' + guessAttempts + ' attempt(s)');
+      qCountry = 1;
+      console.log ('QCountry: correct, ' + qCountry + ' point: ' + attemptCounter + ' attempt(s)');
       break;
     } else {
       alert('Nope, she hasn\'t been there...yet.');
-      qCountry = 0;
     }
 
     guessAttempts++;
   }
   if (guessAttempts === 6){
     alert('Wow. Courtney\'s been to 22 countries, and you couldn\'t guess one? Here\'s the full list: Australia, Austria, Belgium, Canada, Czech Republic, France, Germany, Hungary, Iceland, Indonesia, Ireland, Italy, Luxembourg, Mexico, Netherlands, New Zealand, Norway, Spain, United Kingdom, and Vietnam.');
-  // console.log('QCountry (country?): incorrect ' + qCountry + ' points: ' + guessAttempts + ' attempt(s)');
+    console.log('QCountry: incorrect, ' + qCountry + ' points: ' + attemptCounter + ' attempt(s)');
   }
 }
 //========================final tally========================
