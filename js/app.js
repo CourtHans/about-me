@@ -52,7 +52,7 @@ function askTwinTypeQuestion(){
 
   if (twinType === 'identical') {
     alert('Correct! Courtney\'s an identical twin (also known as monozygous).');
-    qTwinType = 1
+    qTwinType = 1;
   // console.log ('QTwinType: correct ' + qTwinType + ' point');
   } else if (twinType === 'fraternal') {
     alert('Incorrect. Courtney is an IDENTICAL twin. Fun fact: fraternal twins are known as "dizygous twins."');
@@ -120,7 +120,7 @@ function askShowerQuestion(){
 
   while (triesShowerDays < 4 && guessShowerDaysAsANumber !== 28){
     var attemptsLeft = 4 - triesShowerDays;
-    var showerAttemptCounter = triesShowerDays + 1;
+    // var showerAttemptCounter = triesShowerDays + 1; // only needed for console log
     guessShowerDays = prompt('What\'s the record number of days Courtney\'s ever gone without a shower? (attempts left: ' +attemptsLeft + ')');
     var guessShowerDaysAsANumber = parseInt (guessShowerDays);
     if (guessShowerDaysAsANumber === 28){
@@ -152,7 +152,7 @@ function askCountryQuestion(){
 
   for (var guess = 0; guess < 6; guess++){
     var countryAttemptsLeft = 6 - guessAttempts;
-    var countryAttemptCounter = guessAttempts + 1;
+    // var countryAttemptCounter = guessAttempts + 1; //only needed for console.log
     var countryAnswer = prompt('Guess a country (outside the U.S.) that Courtney\'s been to? (attempts left: ' + countryAttemptsLeft + ')').toLowerCase();
 
     if (countryAnswer === countryArray[0] || countryAnswer === countryArray[1] || countryAnswer === countryArray [2] || countryAnswer === countryArray[3] || countryAnswer === countryArray[4] || countryAnswer === countryArray[5] || countryAnswer === countryArray[6] || countryAnswer === countryArray[7] || countryAnswer === countryArray[8] || countryAnswer === countryArray[9] || countryAnswer === countryArray[10] || countryAnswer === countryArray[11] || countryAnswer === countryArray[12] || countryAnswer === countryArray[13] || countryAnswer === countryArray[14] || countryAnswer === countryArray[15] || countryAnswer === countryArray[16] || countryAnswer === countryArray[17] || countryAnswer === countryArray[18] || countryAnswer === countryArray[19] || countryAnswer === countryArray[20] || countryAnswer === countryArray[21] || countryAnswer === countryArray[22] || countryAnswer === countryArray[23] || countryAnswer === countryArray[24]){
